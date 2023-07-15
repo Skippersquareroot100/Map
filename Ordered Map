@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    map <int , string> m;
+    map <int , string> :: iterator it;
+    m.insert({5,"ccc"});
+    m[9]="pks";
+    m.insert({8,"kpp"});
+    m.insert({7,"kpp"});
+    m.insert({6,"kpp"});
+    
+   for(it=m.begin();it!=m.end();++it)
+   {
+       cout<<(*it).first<<" "<<(*it).second;
+       cout<<endl;
+   }
+   cout<<"After erase a element from map"<<endl;
+   m.erase(5);
+   for(it=m.begin();it!=m.end();++it)
+   {
+       cout<<(*it).first<<" "<<(*it).second;
+       cout<<endl;
+   }
+  cout<<"Finnding a value"<<endl;
+      it=m.find(7);
+     if(it==m.end())
+     {
+         cout<<"No value Found";
+     }
+     else
+     {
+         cout<<(*it).first<<" "<<(*it).second;
+     }
+     cout<<endl;
+      cout<<"After erase a element more from map with caution"<<endl;
+    if(it!=m.end())
+    {
+        m.erase(it);
+    }
+    
+    for(it=m.begin();it!=m.end();++it)
+   {
+       cout<<(*it).first<<" "<<(*it).second;
+       cout<<endl;
+   }
+}
